@@ -1,0 +1,358 @@
+@charset "UTF-8";
+
+html{
+  font-size: 62.5%;
+}
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+body{
+  color: #444;
+  font-size: 1.4rem;
+  font-family: 'Titillium Web', sans-serif;
+  background-image: url("../img/woodwatch.jpg");
+  background-size: cover;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/*========================================
+  ヘッダー
+========================================*/
+.header{
+  width: 100%;
+  height: 90px;
+  background-color: rgba(28,49,98,0.8);
+}
+.header h1{
+  display: inline-block;
+  float: left;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 90px;
+}
+.header #top-nav{
+  float: right;
+}
+.header #top-nav li{
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  font-weight: bold;
+}
+.header #top-nav li a{
+  display: block;
+  }
+  /*========================================
+  レイアウト
+========================================*/
+
+.site-width{
+  margin: 0 auto;
+  width: 1000px;
+}
+.page-1column #main {
+  width: 100%;
+}
+
+.page-2column #main {
+  width: 760px;
+}
+.page-title {
+  margin-bottom: 50px;
+  color: aliceblue;
+  padding-top: 30px; /* Lesson14にて追加 */
+  text-align: center;
+  font-size: 2.3rem;
+}
+#footer{
+  width:100%;
+  height: 20px;
+  text-align: center;
+  background-color: #b4c8dd;
+}
+/*========================================
+  サイドバー
+========================================*/
+
+#sidebar {
+  float: right;
+  box-sizing: border-box;
+  margin-right: 20px;
+  padding: 15px;
+  min-height: 500px;
+  width: 200px;
+  background:rgba(159,204,227,0.8);
+  border-radius: 20px;
+}
+
+#sidebar .title {
+  text-align: left;
+  font-size: 14px;
+}
+
+#sidebar .selectbox {
+  position: relative;
+}
+
+#sidebar select {
+  padding: 10px;
+  width: 100%;
+  border-color: #ccc;
+  border-radius: 0;
+  font-size: 14px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#sidebar .icn_select:after {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #333;
+  border-right: 7px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 7px solid transparent;
+  content: "";
+}
+.page-logined #sidebar{
+  margin: 0 0 0 20px;
+}
+.page-logined #sidebar > a{
+  display: block;
+  margin-bottom: 15px;
+}
+#sidebar a{
+  line-height: 2rem;
+}
+#sidebar a:hover{
+  border-bottom: dotted 2px;
+}
+
+/*========================================
+  フォーム
+========================================*/
+label{
+  display: block;
+}
+label.err input, label.err select{
+  background: #f7dcd9;
+}
+input[type="text"], input[type="password"], input[type="number"], .form select,
+textarea {
+  margin-bottom: 15px;
+  font-size: 18px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  background: #f6f5f5;
+  display: block;
+}
+/*input[type="text"], input[type="password"], input[type="number"], .form select,textarea:active {
+  border: 1px solid rgba(0,102,31,0.5);
+  box-shadow: 0 0 10px rgba(0,102,31,0.8)inset;
+}*/
+input[type="checkbox"]{
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  background: #f6f5f5;
+}
+input[type="number"] {
+  width: 100px;
+  text-align: left;
+}
+input[type="submit"] {
+  font-size: 14px;
+  margin: 15px 0;
+  padding: 15px 30px;
+  width: 100%;
+  border: none;
+  background: #333;
+  color: white;
+}
+
+select:hover,
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.form-container {
+  margin: 0 auto;
+  
+}
+.page-1column .form-container{
+  margin: 80px auto;
+}
+
+.form {
+  margin: 0 auto;
+  padding: 30px;
+  width: 400px;
+  border-radius: 5px;
+  background-color: rgba(139,150,166,0.9);
+}
+.form .label-require{
+  margin-left: 5px;
+  background: #fe8a8b;
+  font-size: 14px;
+  padding: 3px 5px;
+  color: white;
+  vertical-align: bottom;
+}
+.page-logined .form{
+  border: none;
+}
+
+.form .title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.form .area-msg{
+  padding: 0 0 15px 0;
+  color: red;
+}
+
+.form .btn-container {
+  overflow: hidden;
+}
+
+.form .btn {
+  float: right;
+}
+.form .area-drop{
+  margin-bottom: 15px;
+  width: 100%;
+  height: 140px;
+  background: #f6f5f4;
+  color: #ccc;
+  text-align: center;
+  line-height: 150px;
+  position: relative;
+  box-sizing: border-box;
+}
+.form .input-file{
+  opacity:0;
+  width:100%;
+  height:140px;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index: 2; /* 必ずz-indexをつけないと登録画像を変更する際にドラッグ＆ドロップできなくなる*/
+}
+.form .prev-img{
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.form .imgDrop-container{
+  width: 33.333%;
+  float: left;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+.form .counter-text{
+  text-align: right;
+}
+/*========================================
+  リスト
+========================================*/
+
+.list > .title {
+  padding-left: 10px;
+  color: #fff;
+  font-size: 1.3rem;
+  border-left: 10px solid rgba(175,0,94,0.8);
+}
+
+.panel-list {
+  float: left;
+  display: inline-block;
+  width: auto;
+  margin-right: -15px;
+}
+
+.panel-list > .panel {
+  float: left;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding-right: 15px;
+  min-height: 185px;
+  width: 25%;
+  color: #333;
+  text-decoration: none;
+  line-height: 1.2em;
+}
+
+a.panel:hover {
+  text-decoration: underline;
+}
+
+.panel-list > .panel img {
+  width: 100%;
+}
+
+.panel-list > .panel .panel-title {
+  margin: 0;
+}
+/*========================================
+  ボタン
+========================================*/
+
+.btn {
+  margin-top: 15px;
+  padding: 0 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  text-decoration: none;
+  border-color: #FFF;
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.btn.btn-primary {
+  background: rgba(175,0,94,0.8);
+  color: white;
+}
+
+.btn.btn-mid {
+  max-width: 150px;
+}
+/*========================================
+  その他
+========================================*/
+.msg-slide{
+  position: fixed;
+  top: 0;
+  width:100%;
+  height:40px;
+  background: rgba(122,206,230,0.6);
+  text-align: center;
+  font-size:16px;
+  line-height: 40px;
+}
